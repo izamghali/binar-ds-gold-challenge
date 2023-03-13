@@ -86,7 +86,7 @@ def text_processing():
     json_response = {
         'status_code': 200,
         'description': "Original Text",
-        'data': re.sub(r'[\W]', ' ', clean_abusive(clean_slang(text, slang_df), abusive_df))
+        'data': re.sub(r'[\W_]', ' ', clean_abusive(clean_slang(text, slang_df), abusive_df))
     }
 
     response_data = jsonify(json_response)
