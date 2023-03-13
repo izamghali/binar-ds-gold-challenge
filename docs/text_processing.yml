@@ -1,0 +1,23 @@
+# endpoint name
+tags:
+  - name: Text Processing
+
+# endpoint description
+get:
+  description: Input text to be cleaned
+
+# input form
+parameters:
+  - name: text 
+    in: formData
+    required: true
+    type: string
+
+# response code
+responses:
+  '200':
+    description: Successful response
+  '400':
+    description: Bad Request
+  '500':
+    description: Internal Server Error
